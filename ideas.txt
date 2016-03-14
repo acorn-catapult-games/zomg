@@ -1,0 +1,8 @@
+Large world with randomly generated buildings.
+	buildings/walls are destroyable
+Veiw distance from player only thing shown.
+	Can't see through walls
+melee and ranged attacks
+	%chance of hit after effective distance of weapon
+Hardmode only
+	one hit kills everything
