@@ -9,6 +9,7 @@
     <sprite>sprites\zombie</sprite>
     <sprite>sprites\Human</sprite>
     <sprite>sprites\barricade</sprite>
+    <sprite>sprites\bullet</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\road_1</background>
@@ -21,6 +22,7 @@
     <object>objects\player</object>
     <object>objects\enemy</object>
     <object>objects\block</object>
+    <object>objects\shot</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\test</room>
