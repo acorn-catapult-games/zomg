@@ -18,6 +18,9 @@
     <background>background\grass</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\instance_nth_nearest.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\player</object>
     <object>objects\enemy</object>

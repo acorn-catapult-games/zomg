@@ -1,0 +1,12 @@
+
+if(distance_to_object(player)<90){
+    motion_set(point_direction(x,y,player.x,player.x),2.5);
+}
+else if(distance_to_object(nearest) < 90){  
+    motion_set(point_direction(x,y,nearest.x,nearest.x),2.5);
+}
+else{
+    if(random_range(-1,1) > 0){
+        motion_set(irandom(360),1);
+    }
+}
