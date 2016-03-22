@@ -16,6 +16,7 @@
     <background>background\road_2</background>
     <background>background\sidewalk</background>
     <background>background\grass</background>
+    <background>background\white</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -23,9 +24,10 @@
   </scripts>
   <objects name="objects">
     <object>objects\player</object>
-    <object>objects\enemy</object>
+    <object>objects\boid</object>
     <object>objects\block</object>
     <object>objects\shot</object>
+    <object>objects\find</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\test</room>

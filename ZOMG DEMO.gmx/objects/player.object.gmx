@@ -92,7 +92,23 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="enemy">
+    <event eventtype="4" ename="find">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="4" ename="boid">
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -129,7 +145,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>-3</string>
+            <string>-1</string>
           </argument>
         </arguments>
       </action>
@@ -155,7 +171,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>3</string>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -177,7 +193,7 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>3</string>
+            <string>1</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -203,7 +219,7 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>-3</string>
+            <string>-1</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -241,7 +257,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>6</string>
+            <string>10</string>
           </argument>
           <argument>
             <kind>0</kind>

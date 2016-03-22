@@ -8,28 +8,50 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="4" ename="enemy">
+    <event eventtype="4" ename="find">
       <action>
         <libid>1</libid>
-        <id>116</id>
+        <id>115</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_move_contact</functionname>
+        <functionname>action_bounce</functionname>
         <codestring></codestring>
-        <whoName>enemy</whoName>
+        <whoName>boid</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>-point_direction (enemy.x,enemy.y,block.x,block.y)</string>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
           <argument>
-            <kind>0</kind>
-            <string>1</string>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="boid">
+      <action>
+        <libid>1</libid>
+        <id>115</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_bounce</functionname>
+        <codestring></codestring>
+        <whoName>boid</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
           <argument>
             <kind>4</kind>

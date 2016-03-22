@@ -11,6 +11,30 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
+        <id>101</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>111101111</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>301</id>
         <kind>0</kind>
         <userelative>-1</userelative>
@@ -30,92 +54,6 @@
           <argument>
             <kind>4</kind>
             <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="1" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>enemy</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>irandom(500)</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>irandom(500)</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>404</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_number</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>enemy</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>30</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>enemy</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>irandom(500)</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>irandom(500)</string>
           </argument>
         </arguments>
       </action>
@@ -123,13 +61,65 @@
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
+        <id>611</id>
+        <kind>6</kind>
         <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>nearest</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>instance_nth_nearest(x,y,boid,2)</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>-1</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>instance_nearest(x,y,find)</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>noone</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
@@ -137,11 +127,15 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>irandom(40)</string>
+            <string>distance_to_object(instance_nearest(x,y,find))</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>distance_to_object(nearest)</string>
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -165,7 +159,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>instance_nth_nearest(x,y,enemy,2)</string>
+            <string>instance_nearest(x,y,find)</string>
           </argument>
         </arguments>
       </action>
@@ -186,15 +180,15 @@
           <argument>
             <kind>1</kind>
             <string>
-if(distance_to_object(player)&lt;90){
-    motion_set(point_direction(x,y,player.x,player.x),2.5);
+if(distance_to_object(player) &lt; 300){
+    motion_set(point_direction(x,y,player.x,player.x),1.5+random_range(-.2,.2));
 }
-else if(distance_to_object(nearest) &lt; 90){  
-    motion_set(point_direction(x,y,nearest.x,nearest.x),2.5);
+else if(distance_to_object(nearest) &lt; 160 and distance_to_object(nearest) &gt; 15){  
+    motion_set(nearest.direction+random_range(-10,10),1+random_range(-.2,.2));
 }
 else{
     if(random_range(-1,1) &gt; 0){
-        motion_set(irandom(360),1);
+        motion_set(random(360),1+random_range(-.2,.2));
     }
 }
 </string>
@@ -226,6 +220,90 @@ else{
           <argument>
             <kind>0</kind>
             <string>direction+90</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>irandom_range(10,20)</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="find">
+      <action>
+        <libid>1</libid>
+        <id>116</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move_contact</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>direction+random_range(-15,15)</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="boid">
+      <action>
+        <libid>1</libid>
+        <id>116</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_move_contact</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>direction+random_range(-15,15)</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
           </argument>
           <argument>
             <kind>4</kind>
